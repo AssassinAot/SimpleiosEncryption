@@ -14,6 +14,7 @@
 		653217C420F4AD98009AC675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653217C220F4AD98009AC675 /* LaunchScreen.storyboard */; };
 		653217CF20F4AD99009AC675 /* SimpleiosEncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653217CE20F4AD99009AC675 /* SimpleiosEncryptionTests.swift */; };
 		653217DA20F4AD99009AC675 /* SimpleiosEncryptionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653217D920F4AD99009AC675 /* SimpleiosEncryptionUITests.swift */; };
+		653217ED20F4AF2E009AC675 /* CryptLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 653217EB20F4AF2E009AC675 /* CryptLib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		653217D520F4AD99009AC675 /* SimpleiosEncryptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleiosEncryptionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653217D920F4AD99009AC675 /* SimpleiosEncryptionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleiosEncryptionUITests.swift; sourceTree = "<group>"; };
 		653217DB20F4AD99009AC675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		653217EA20F4AF2D009AC675 /* SimpleiosEncryption-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleiosEncryption-Bridging-Header.h"; sourceTree = "<group>"; };
+		653217EB20F4AF2E009AC675 /* CryptLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptLib.m; sourceTree = "<group>"; };
+		653217EC20F4AF2E009AC675 /* CryptLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptLib.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		653217B820F4AD97009AC675 /* SimpleiosEncryption */ = {
 			isa = PBXGroup;
 			children = (
+				653217E920F4AEFA009AC675 /* crypto */,
 				653217B920F4AD97009AC675 /* AppDelegate.swift */,
 				653217BB20F4AD97009AC675 /* ViewController.swift */,
 				653217BD20F4AD97009AC675 /* Main.storyboard */,
@@ -123,6 +128,17 @@
 				653217DB20F4AD99009AC675 /* Info.plist */,
 			);
 			path = SimpleiosEncryptionUITests;
+			sourceTree = "<group>";
+		};
+		653217E920F4AEFA009AC675 /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				653217EC20F4AF2E009AC675 /* CryptLib.h */,
+				653217EB20F4AF2E009AC675 /* CryptLib.m */,
+				653217EA20F4AF2D009AC675 /* SimpleiosEncryption-Bridging-Header.h */,
+			);
+			name = crypto;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +209,7 @@
 				TargetAttributes = {
 					653217B520F4AD97009AC675 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					653217C920F4AD99009AC675 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -256,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653217ED20F4AF2E009AC675 /* CryptLib.m in Sources */,
 				653217BC20F4AD97009AC675 /* ViewController.swift in Sources */,
 				653217BA20F4AD97009AC675 /* AppDelegate.swift in Sources */,
 			);
@@ -430,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleiosEncryption/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +457,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.assassin.SimpleiosEncryption;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleiosEncryption/New Group/SimpleiosEncryption-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleiosEncryption/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +477,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.assassin.SimpleiosEncryption;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleiosEncryption/New Group/SimpleiosEncryption-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
